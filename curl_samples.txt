@@ -1,0 +1,16 @@
+GET
+curl -i http://localhost:5000/band/api/v1.0/bands/0
+curl -i http://localhost:5000/band/api/v1.0/bands/1
+curl -i http://localhost:5000/band/api/v1.0/bands/2
+
+POST
+curl -i -H "Content-Type: application/json" -X POST -d '{"name":"porcelain triangles"}' http://localhost:5000/band/api/v1.0/bands
+curl -i -H "Content-Type: application/json" -X POST -d '{"name":"porcelain triangles, part 2"}' http://localhost:5000/band/api/v1.0/bands
+curl -i -H "Content-Type: application/json" -X POST -d '{"name":"Jimmy and the Neutrons", "genre":"Rockabilly"}' http://localhost:5000/band/api/v1.0/bands
+
+
+PUT
+curl -i -H "Content-Type: application/json" -X PUT -d '{"name":"The Pocket Morty Experience"}' http://localhost:5000/todo/api/v1.0/bands/2
+
+DELETE
+curl -i -H "Content-Type: application/json" -X DELETE http://localhost:5000/todo/api/v1.0/bands/2
