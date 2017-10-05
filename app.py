@@ -5,13 +5,33 @@ app = Flask(__name__)
 bands = [
     {
         'id': 1,
-        'name': u'Stormageddon and the dark lords of all',
+        'name': u'Stormageddon and the Dark Lords of All',
         'genre':u'Heavy Metal'
     },
     {
         'id': 2,
         'name': u'The Pickle Ricks',
-        'genre': u'blues'
+        'genre': u'Blues'
+    },
+    {
+        'id': 3,
+        'name': u'Samwise and the Gamgees',
+        'genre':u'Folk'
+    },
+    {
+        'id': 4,
+        'name': u'The Porta Potties',
+        'genre': u'Grunge'
+    },
+    {
+        'id': 5,
+        'name': u'Newsweek Headline',
+        'genre':u'Alternative'
+    },
+    {
+        'id': 6,
+        'name': u'Syringe Dipity',
+        'genre': u'Dubstep'
     }
  ]
 
