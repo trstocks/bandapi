@@ -27,6 +27,9 @@ def make_public_band(band):
 def get_index():
     return "This is a placeholder"
 
+@app.add_url_rule('/favicon.ico',
+                 redirect_to=url_for('static', filename='favicon.ico'))
+
 @app.route('/band/api/v1.0/bands',methods=['GET'])
 def get_bands():
     return jsonify({'bands':make_public_band(band) for band in bands})
