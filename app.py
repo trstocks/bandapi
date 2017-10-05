@@ -39,7 +39,8 @@ def make_public_band(band):
     new_band={}
     for field in band:
         if field == 'id':
-            new_band['uri'] = url_for('get_band', band_id=band['id'], _external=True)
+            new_band['uri'] = url_for('get_band', band_id=band['id'],
+            _external=True)
         else:
             new_band[field] = band[field]
     return new_band
@@ -54,7 +55,7 @@ def get_favicon():
 
 @app.route('/band/api/v1.0/bands',methods=['GET'])
 def get_bands():
-    return jsonify({'bands':make_public_band(band) for band in bands})
+    return jsonify({'bands':[make_public_band(band) for band in bands]})
 
 
 @app.route('/band/api/v1.0/bands',methods=['POST'])
