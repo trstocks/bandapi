@@ -23,6 +23,10 @@ def make_public_band(band):
             new_band[field] = band[field]
     return new_band
 
+@app.route('/',methods=['GET'])
+def get_index():
+    return "This is a placeholder"
+
 @app.route('/band/api/v1.0/bands',methods=['GET'])
 def get_bands():
     return jsonify({'bands':make_public_band(band) for band in bands})
