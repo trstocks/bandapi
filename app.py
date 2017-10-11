@@ -32,6 +32,16 @@ bands = [
         'id': 6,
         'name': u'Syringe Dipity',
         'genre': u'Dubstep'
+    },
+    {
+        'id': 7,
+        'name': u'Red Bean and the Mochis',
+        'genre': u'Youtube AMV music'
+     },
+    {
+        'id': 8,
+        'name': u'FailStorm',
+        'genre': u'Crock'
     }
  ]
 
@@ -73,7 +83,7 @@ def create_bands():
 @app.route('/band/api/v1.0/bands/<int:band_id>',methods=['GET'])
 def get_band(band_id):
     band = [band for band in bands if band['id'] == band_id]
-    if len(band) == 0: 
+    if len(band) == 0:
         abort(404)
     return jsonify({'band': band[0]})
 
