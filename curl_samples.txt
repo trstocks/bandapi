@@ -14,3 +14,7 @@ curl -i -H "Content-Type: application/json" -X PUT -d '{"name":"The Pocket Morty
 
 DELETE
 curl -i -H "Content-Type: application/json" -X DELETE http://localhost:5000/todo/api/v1.0/bands/2
+
+
+
+* try using the heroku domain as well: https://bandapi.herokuapp.com/(i.e. https://bandapi.herokuapp.com/band/api/v1.0/bands)
